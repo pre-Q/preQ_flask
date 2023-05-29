@@ -1,16 +1,33 @@
-# This is a sample Python script.
+import json
+from flask import Flask, request, current_app
+from collections import OrderedDict
+from extract_keyword import get_keyword
 
-# Press ⌃F5 to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+app = Flask(__name__)
 
 
-# Press the green button in the gutter to run the script.
+def api_response(status, message, data):
+    return current_app.response_class(
+        json.dumps(OrderedDict([('status', status), ('message', message), ('data', data)]),
+                   indent=None), mimetype='application/json')
+
+
+@app.route('/api/v1/keyword', methods=['POST'])
+def post_keyword():
+    try:
+        application = request.get_json()['application']
+        keyword_top5, soft_skills = get_keyword(application)
+        return api_response(200, "키워드 추출 성공", {"keywordTop5": keyword_top5, "softSkills": soft_skills}), 200
+    except Exception as e:
+        print("Someting wrong!!", e)
+        return api_response(500, "Internal Server Error", str(e)), 500
+
+
+
+@app.route('/')
+def health_check():
+    return 'Hello, World!'
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app.run('0.0.0.0', port=8000, debug=True)
