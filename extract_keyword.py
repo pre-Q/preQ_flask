@@ -17,6 +17,9 @@ IT = ['개발', '백엔드', '프론트엔드', '인공지능', 'AI', '증강현
 
 
 def get_keyword(application):
+    if application is None:
+        return 0, [0, 0, 0, 0, 0, 0]
+
     data = application.split('.')
     data = list(map(lambda x: x.split('\n'), data))
     data = sum(data, [])
