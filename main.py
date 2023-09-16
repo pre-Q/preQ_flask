@@ -16,12 +16,15 @@ def api_response(status, message, data):
 def post_keyword():
     try:
         application = request.get_json()['application']
+
+        if application == "":
+            return api_response(200, "키워드 추출 성공", {"keywordTop5": 0, "softSkills": 0}), 200
+
         keyword_top5, soft_skills = get_keyword(application)
         return api_response(200, "키워드 추출 성공", {"keywordTop5": keyword_top5, "softSkills": soft_skills}), 200
     except Exception as e:
-        print("Someting wrong!!", e)
+        print("Something wrong!!", e)
         return api_response(500, "Internal Server Error", str(e)), 500
-
 
 
 @app.route('/')
