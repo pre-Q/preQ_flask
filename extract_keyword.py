@@ -18,9 +18,8 @@ IT = ['개발', '백엔드', '프론트엔드', '인공지능', 'AI', '증강현
 
 
 def get_keyword(application):
-    data = application.split('.')
-    data = list(map(lambda x: x.split('\n'), data))
-    data = sum(data, [])
+    data = application.replace('\n', '').replace('\t', '').replace('\r', '')
+    data = data.split('.')
 
     kkma = Kkma()
 
