@@ -14,7 +14,7 @@ leadership = ['설득', '창의성', '주도', '팀장', '임원', '조장', '�
               '피드백', '영향력', '비전', '신임', '책임감', '관리', '제안', '믿음', '존중', '자발', '배려']
 IT = ['개발', '백엔드', '프론트엔드', '인공지능', 'AI', '증강현실', 'API', '노드', 'NodeJs', 'SpringBoot', '자바', 'Java', '스프링부트', '스프링', '자바스크립트', '안드로이드', 'iOS', 'Android', '타입스크립트', 'TypeScript', '자바스크립트', 'JavaScript', 'C++', 'C',  '데이터 분석', '모델링', '딥러닝', '머신러닝', 'C#', '파이썬', 'Python', '데이터베이스', 'DB', '서버', '웹', '앱', 'HTML', 'CSS', 'Docker', 'CICD', '스케줄링', '클라이언트', '배포', 'json', '센서', '쓰레드', 'IOT', '데이터', '장고', 'Django',
       'data', '해커톤', 'MVC', '아두이노', '라즈베리파이', 'MongoDB', 'RDS', 'PostgreSQL', 'MySQL', 'SQL', 'NoSQL', 'Git', 'AWS', 'Swagger', '스웨거', '명세서', '데이터마이닝', 'PHP', 'JSP', 'DevOps', '릴리즈', '클라우드', 'cloud', 'NFC', '메타버스', '자동화', '알고리즘', '아키텍처', 'UX', 'UI', '웹퍼블리싱', '보안', '해킹', '기계학습', '네트워크', '운영체제', 'OS', '오픈소스', 'GPT', 'Swift', 'Kotlin', '코틀린', '로드밸런싱',
-      '쿠버네티스', '프레임워크', '캐시', '애자일', 'Agile', '스프린트', '스크럼', '소프트웨어', 'SW', '프로그래밍', 'SI', '빅데이터', '데이터사이언스', '블록체인', '풀스택', 'EC2', 'Jenkins', 'Github Actions', 'React', '리액트', 'Flask', 'Vue.js', 'jQuery', '클론코딩', 'Redux', 'JPA', 'Flutter', 'Express', 'Rest API', 'BootStrap', '부트스트랩', 'Unity', '객체지향', 'R', 'Oracle', 'MariaDB', 'Linux', 'Pandas', '크롤링', '리뷰']
+      '쿠버네티스', '프레임워크', '캐시', '애자일', 'Agile', '스프린트', '스크럼', '소프트웨어', 'SW', '프로그래밍', 'SI', '빅데이터', '데이터사이언스', '블록체인', '풀스택', 'EC2', 'Jenkins', 'Github Actions', 'React', '리액트', 'Flask', 'Vue.js', 'jQuery', '클론코딩', 'Redux', 'JPA', 'Flutter', 'Express', 'Rest API', 'BootStrap', '부트스트랩', 'Unity', '객체지향', 'R', 'Oracle', 'MariaDB', 'Linux', 'Pandas', '크롤링', '리뷰', '인사이트']
 
 
 def get_keyword(application):
