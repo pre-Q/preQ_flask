@@ -70,6 +70,9 @@ def get_keyword(application):
 
     ## 전체 합계
     total = p_cnt + c_cnt + ch_cnt + ps_cnt + l_cnt + it_cnt
+    
+    if total == 0:
+        return top_5, [0, 0, 0, 0, 0, 0]
 
     ## 수치 계산
     p_val = round(p_cnt / total * 100, 2)
