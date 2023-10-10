@@ -25,12 +25,13 @@ def get_keyword(application):
 
     output = list()
     for sample in data:
-        ex_pos = kkma.pos(sample)
-        text_data = []
-        for (text, tclass) in ex_pos:
-            if tclass == 'NNG' or tclass == 'NNP' or tclass == 'VV' or tclass == 'VA' or tclass == 'OL' or tclass == 'MAG':
-                text_data.append(text)
-        output.append(text_data)
+        if sample.strip():
+            ex_pos = kkma.pos(sample)
+            text_data = []
+            for (text, tclass) in ex_pos:
+                if tclass == 'NNG' or tclass == 'NNP' or tclass == 'VV' or tclass == 'VA' or tclass == 'OL' or tclass == 'MAG':
+                    text_data.append(text)
+            output.append(text_data)
 
     corpus = list(map(lambda x: ' '.join(x), output))
 
